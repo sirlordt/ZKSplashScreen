@@ -1,0 +1,7 @@
+<window title="Demo of Server Push" border="normal" apply="test.CLong2Controller" mode="overlapped">
+    <vbox>
+        <button id="btnLanuchThread" label="Start Server Push" />
+        <label id="lbProgressMessage" value="0" />
+        <progressmeter id="ProgressBar" value="0" width="100px" />
+    </vbox>
+</window>

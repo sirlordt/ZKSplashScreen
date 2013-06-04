@@ -1,0 +1,29 @@
+<window id="w" width="200px" title="Test echoEvent" border="normal">
+  <attribute name="onLater"><![CDATA[
+
+      for ( int I=0; I < 100; I++ ) {
+  
+    	 message.setValue( "Loading slow module " + Integer.toString( I ) );
+    	  
+    	 //Thread.sleep( 2000 );
+    	  
+         message.setValue( "Slow module loaded" + Integer.toString( I ) );
+
+         progressBar.setValue( I );
+         System.out.println( I );
+  
+      }
+  
+    ]]>
+    </attribute>
+  
+  <button label="Echo Event">
+  <attribute name="onClick">
+  //Clients.showBusy("Execute..."); //show a busy message to user
+  Events.echoEvent( "onLater", w, null); //echo an event back
+  </attribute>
+  </button>
+  <label id="message" value="0" />
+  <progressmeter id="progressBar" value="0" width="100px" />
+  
+</window>

@@ -1,0 +1,31 @@
+<zk>
+    <window>
+        <div style="border: 3px solid blue;" width="100%" context="scrollPopup">
+            <div id="top" />
+            <label value="Top" style="font-weight: bold; font-size: 3em;"/>
+            <separator height="1500px"/>
+            <div id="middle"/>
+            <label value="Middle" style="font-weight: bold; font-size: 3em;"/>
+            <separator height="1500px"/>
+            <label value="Bottom" style="font-weight: bold; font-size: 3em;"/>
+            <div id="bottom" />
+        </div>
+        <menupopup id="scrollPopup">
+            <menuitem label="Top">
+                <attribute name="onClick">
+                    Clients.scrollIntoView(top);
+                </attribute>
+            </menuitem>
+            <menuitem label="Middle">
+                <attribute name="onClick">
+                    Clients.scrollIntoView(middle);
+                </attribute>
+            </menuitem>
+            <menuitem label="Bottom">
+                <attribute name="onClick">
+                    Clients.scrollIntoView(bottom);
+                </attribute>
+            </menuitem>
+        </menupopup>
+    </window>
+</zk>
